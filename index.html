@@ -1,1 +1,574 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f4f7fc">
+<meta name="description" content="SharkPay P2P processing services, platform information, terms and official announcements.">
+<title>SharkPay | P2P Payment Services</title>
+  <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '3712923858860401');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=3712923858860401&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+:root {
+  --blue: #1769ff;
+  --dark: #10234a;
+  --muted: #63738c;
+  --bg: #f4f7fc;
+  --border: #e1e9f5;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--dark);
+  line-height: 1.6;
+}
+a { color: inherit; }
+.container { max-width: 1040px; margin: auto; padding: 0 22px; }
+header { background: #fff; border-bottom: 1px solid var(--border); }
+.navbar {
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 22px;
+  font-weight: 800;
+  text-decoration: none;
+}
+.brand-icon {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  background: linear-gradient(135deg, #4896ff, #1354db);
+  color: #fff;
+  font-size: 23px;
+  font-weight: 900;
+}
+.status {
+  font-size: 11px;
+  font-weight: 700;
+  color: #315e9d;
+  background: #edf4ff;
+  padding: 8px 12px;
+  border-radius: 30px;
+}
+main { padding: 35px 0; }
+.hero {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 55px 35px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 25px;
+  box-shadow: 0 15px 45px #193c7010;
+}
+.hero:before {
+  content: "";
+  position: absolute;
+  top: -180px;
+  left: -100px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: #edf4ff;
+}
+.hero-content { position: relative; z-index: 1; }
+.eyebrow {
+  display: inline-block;
+  padding: 8px 14px;
+  background: #edf4ff;
+  color: var(--blue);
+  border-radius: 30px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+h1 {
+  font-size: clamp(34px, 5vw, 55px);
+  line-height: 1.16;
+  letter-spacing: -1.8px;
+  margin: 23px 0 18px;
+}
+h1 span { color: var(--blue); }
+.intro {
+  max-width: 620px;
+  margin: auto;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.9;
+}
+.actions {
+  margin-top: 27px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 50px;
+  padding: 13px 21px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 750;
+  transition: .2s;
+}
+.button-primary {
+  background: var(--blue);
+  color: white;
+  box-shadow: 0 7px 20px #1769ff25;
+}
+.button-primary:hover {
+  background: #104bc4;
+  transform: translateY(-2px);
+}
+.button-secondary {
+  background: white;
+  color: var(--blue);
+  border: 1px solid #cfddf3;
+}
+.small-note { margin-top: 15px; font-size: 12px; color: var(--muted); }
+
+/* Countdown next to the top Telegram button */
+.hero-actions {
+  flex-direction: column;
+  align-items: center;
+}
+.hero-telegram-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.hero-countdown {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 13px;
+  background: #edf4ff;
+  border: 1px solid #d7e6ff;
+  border-radius: 12px;
+}
+.hero-countdown-label {
+  font-size: 10px;
+  font-weight: 800;
+  color: #63738c;
+}
+.hero-countdown-time {
+  font-size: 20px;
+  font-weight: 800;
+  color: #1769ff;
+  font-variant-numeric: tabular-nums;
+}
+.section-heading { margin: 38px 0 18px; text-align: center; }
+.section-heading h2 { font-size: 25px; }
+.section-heading p { margin-top: 7px; color: var(--muted); font-size: 14px; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 17px;
+  padding: 24px;
+}
+.card-icon {
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  background: #edf4ff;
+  border-radius: 13px;
+  color: var(--blue);
+  font-size: 22px;
+  margin-bottom: 17px;
+}
+.card h3 { font-size: 16px; margin-bottom: 9px; }
+.card p { font-size: 13px; line-height: 1.8; color: var(--muted); }
+.info-panel {
+  margin-top: 20px;
+  padding: 25px;
+  background: #eaf2ff;
+  border: 1px solid #d8e6fc;
+  border-radius: 17px;
+}
+.info-panel h2 { font-size: 19px; margin-bottom: 9px; }
+.info-panel p { font-size: 13px; line-height: 1.9; color: #415775; }
+.legal {
+  margin-top: 20px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 17px;
+  padding: 25px;
+}
+.legal h2 { font-size: 18px; margin-bottom: 10px; }
+.legal p { font-size: 13px; color: var(--muted); line-height: 1.9; }
+.legal p + p { margin-top: 12px; }
+
+/* Telegram community section */
+.telegram-card {
+  margin-top: 24px;
+  padding: 28px 22px;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background: linear-gradient(145deg, #fff, #f0f6ff);
+  border: 1px solid #dbe7fa;
+  border-radius: 22px;
+  box-shadow: 0 15px 40px #194b960f;
+}
+.telegram-heading { font-size: 24px; font-weight: 800; margin-bottom: 8px; }
+.telegram-description {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+  max-width: 460px;
+  margin: 0 auto 22px;
+}
+.countdown-label {
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 1.8px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+.countdown { display: flex; justify-content: center; gap: 10px; margin-bottom: 16px; }
+.countdown-item {
+  width: 68px;
+  padding: 12px 5px;
+  background: #eaf2ff;
+  border: 1px solid #d7e6ff;
+  border-radius: 12px;
+}
+.countdown-item strong {
+  display: block;
+  color: var(--blue);
+  font-size: 25px;
+  font-variant-numeric: tabular-nums;
+}
+.countdown-item small { color: var(--muted); font-size: 9px; }
+.telegram-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  width: 100%;
+  max-width: 390px;
+  min-height: 55px;
+  margin: 0 auto 12px;
+  padding: 16px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: .3px;
+  background: linear-gradient(110deg, #1673ed, #3294ff);
+  border-radius: 13px;
+  box-shadow: 0 8px 20px #1769ff30;
+}
+.telegram-icon {
+  width: 27px;
+  height: 27px;
+  display: grid;
+  place-items: center;
+  background: #ffffff25;
+  border-radius: 50%;
+  font-size: 15px;
+}
+.member-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 15px;
+  text-align: left;
+  background: white;
+  border: 1px solid #e1eaf7;
+  border-radius: 13px;
+}
+.member-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  color: var(--blue);
+  background: #eaf2ff;
+  border-radius: 12px;
+  font-size: 21px;
+}
+.member-title { font-size: 14px; font-weight: 800; }
+.member-caption { font-size: 11px; color: var(--muted); margin-top: 4px; }
+
+footer {
+  border-top: 1px solid var(--border);
+  background: #fff;
+  padding: 26px 0;
+  color: var(--muted);
+  font-size: 12px;
+  text-align: center;
+}
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.footer-links a { color: #315e9d; text-decoration: none; }
+
+@media(max-width:700px) {
+  .container { padding: 0 15px; }
+  .navbar { min-height: 70px; }
+  .brand { font-size: 20px; }
+  .status { font-size: 9px; padding: 7px; }
+  main { padding: 22px 0; }
+  .hero { padding: 39px 18px; border-radius: 20px; }
+  h1 { letter-spacing: -1px; }
+  .intro { font-size: 14px; }
+  .actions { flex-direction: column; }
+  .button { width: 100%; }
+  .hero-telegram-group { flex-direction: column; }
+  .hero-telegram-group .button { width: 100%; }
+  .hero-countdown { justify-content: center; }
+  .grid { grid-template-columns: 1fr; }
+  .card { padding: 21px; }
+  .section-heading { margin-top: 30px; }
+  .info-panel, .legal { padding: 21px; }
+  .telegram-card { padding: 25px 16px; }
+  .telegram-heading { font-size: 21px; }
+  .countdown { gap: 7px; }
+  .countdown-item { width: 61px; }
+}
+</style>
+</head>
+
+<body>
+<header>
+  <div class="container navbar">
+    <a class="brand" href="#" aria-label="SharkPay home">
+      <span class="brand-icon">S</span>
+      <span>SharkPay</span>
+    </a>
+    <span class="status">P2P SERVICE INFORMATION</span>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="eyebrow">SHARKPAY OFFICIAL</div>
+
+      <h1>P2P Payment Processing<br><span>Made Clear.</span></h1>
+
+      <p class="intro">
+        Explore SharkPay service information, P2P processing
+        workflows, applicable fees and platform announcements.
+        Review the terms and eligibility requirements before
+        using any service.
+      </p>
+
+      <div class="actions hero-actions">
+
+        <div class="hero-telegram-group">
+          <a class="button button-primary"
+             href="https://telegram.me/+tDbcGgT-yKw4YzQ9"
+             target="_blank" rel="noopener noreferrer">
+            ✈ Official Telegram Channel ↗
+          </a>
+
+          <div class="hero-countdown">
+            <span class="hero-countdown-label">TIME LEFT</span>
+            <span class="hero-countdown-time">
+              <b id="hero-minutes">02</b>:<b id="hero-seconds">00</b>
+            </span>
+          </div>
+        </div>
+
+        <a class="button button-secondary" href="#services">
+          Explore Services
+        </a>
+
+      </div>
+
+      <p class="small-note">
+        Review applicable terms before engaging with any service.
+      </p>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="section-heading">
+      <h2>Platform Information</h2>
+      <p>Understand the service before getting started.</p>
+    </div>
+
+    <div class="grid">
+      <article class="card">
+        <div class="card-icon">↔</div>
+        <h3>P2P Processing</h3>
+        <p>
+          Review supported peer-to-peer transaction workflows
+          and applicable requirements. Availability depends
+          on eligibility and approval.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="card-icon">▤</div>
+        <h3>Fees &amp; Terms</h3>
+        <p>
+          Check actual service charges, transaction limits,
+          settlement conditions and other applicable terms.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="card-icon">ⓘ</div>
+        <h3>Official Updates</h3>
+        <p>
+          Visit the official Telegram channel for platform
+          announcements and service information.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="info-panel">
+    <h2>Important Service Information</h2>
+    <p>
+      USDT and other crypto-assets may be subject to price
+      fluctuations, legal restrictions and transaction risks.
+      Service availability, supported jurisdictions and
+      eligibility requirements must be confirmed before use.
+      Digital-asset transactions may be irreversible.
+      No guaranteed profits or returns are promised.
+    </p>
+  </section>
+
+  <section id="telegram" class="telegram-card">
+    <h2 class="telegram-heading">Join SharkPay Community</h2>
+
+    <p class="telegram-description">
+      Get official announcements, P2P service information
+      and important platform updates through our Telegram channel.
+    </p>
+
+  
+    </div>
+
+    <a class="telegram-button"
+       href="https://telegram.me/+tDbcGgT-yKw4YzQ9"
+       target="_blank" rel="noopener noreferrer">
+      <span class="telegram-icon">➤</span>
+      JOIN OFFICIAL TELEGRAM
+      <span>↗</span>
+    </a>
+
+    <div class="member-info">
+      <div class="member-icon">♙</div>
+      <div>
+        <div class="member-title">SharkPay Community</div>
+        <div class="member-caption">
+          Official channel · Community information
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="legal">
+    <h2>Before You Get Started</h2>
+    <p>
+      Review applicable fees, transaction limits, settlement
+      procedures, privacy policy and service terms. Never share
+      passwords, OTPs or private wallet keys through Telegram
+      or an unverified website.
+    </p>
+    <p>
+      <strong>Business information:</strong>
+      Add your verified legal business name, support contact,
+      supported jurisdictions and relevant regulatory disclosures
+      before publishing.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="/terms">Terms of Service</a>
+      <a href="/privacy">Privacy Policy</a>
+      <a href="mailto:YOUR_SUPPORT_EMAIL">Contact</a>
+    </div>
+    <p>
+      © <span id="year"></span> SharkPay.
+      Please review applicable terms and legal requirements.
+    </p>
+  </div>
+</footer>
+
+<script>
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+// Both countdown displays use the same two-minute deadline.
+const deadline = Date.now() + 2 * 60 * 1000;
+
+function updateCountdown() {
+  const remaining = Math.max(0, deadline - Date.now());
+
+  const minutes = String(
+    Math.floor(remaining / 60000)
+  ).padStart(2, "0");
+
+  const seconds = String(
+    Math.floor((remaining % 60000) / 1000)
+  ).padStart(2, "0");
+
+  document.getElementById("hero-minutes").textContent = minutes;
+  document.getElementById("hero-seconds").textContent = seconds;
+
+  document.getElementById("tg-hours").textContent = "00";
+  document.getElementById("tg-minutes").textContent = minutes;
+  document.getElementById("tg-seconds").textContent = seconds;
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+</script>
+</body>
+</html>
+
